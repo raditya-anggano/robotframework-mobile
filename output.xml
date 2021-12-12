@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20211210 20:28:53.837" rpa="false" schemaversion="2">
+<suite id="s1" name="Mobile" source="E:\Raditya Anggano\Workspace\robotframework-mobile\mobile.robot">
+<test id="s1-t1" name="As a user i want to open API Demos apps">
+<kw name="Start Session" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>10</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20211210 20:28:54.467" endtime="20211210 20:28:54.467"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=io.appium.android.apis</arg>
+<arg>appActivity=io.appium.android.apis.ApiDemos</arg>
+<arg>autoGrantPermissions=true</arg>
+<arg>noReset=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20211210 20:28:54.467" endtime="20211210 20:29:03.976"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211210 20:29:04.985" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211210 20:29:03.977" endtime="20211210 20:29:04.985"/>
+</kw>
+<status status="PASS" starttime="20211210 20:28:54.466" endtime="20211210 20:29:04.985"/>
+</kw>
+<kw name="Page Should Contain Text" library="AppiumLibrary">
+<arg>Accessibility</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<msg timestamp="20211210 20:29:05.309" level="INFO">Current page contains text 'Accessibility'.</msg>
+<status status="PASS" starttime="20211210 20:29:04.986" endtime="20211210 20:29:05.309"/>
+</kw>
+<kw name="Tap" library="AppiumLibrary">
+<arg>${accessibility}</arg>
+<doc>Tap element identified by ``locator``. </doc>
+<status status="PASS" starttime="20211210 20:29:05.310" endtime="20211210 20:29:07.587"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211210 20:29:08.599" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211210 20:29:07.588" endtime="20211210 20:29:08.599"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20211210 20:29:08.600" endtime="20211210 20:29:09.311"/>
+</kw>
+<status status="PASS" starttime="20211210 20:28:54.465" endtime="20211210 20:29:09.312"/>
+</test>
+<status status="PASS" starttime="20211210 20:28:53.840" endtime="20211210 20:29:09.319"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Mobile">Mobile</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
